@@ -4,19 +4,12 @@ https://kasmweb.com/kasmvnc.html
 
 https://youtu.be/U7e-mcJdZok
 
-
-git clone https://github.com/jamieduk/Setup-Kasm.git
-
-
 Use Auto Installer Script
 
-sudo chmod +x *.sh
-
-./Setup.sh
+git clone https://github.com/jamieduk/Setup-Kasm.git && mv Setup-Kasm Kasm && cd Kasm && sudo chmod +x *.sh && ./Setup.sh
 
 
-
-~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manually Setup from Master
 
