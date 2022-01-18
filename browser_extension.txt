@@ -1,0 +1,3 @@
+goto both firefox and chrome and get kasm browser extension installed and update the extension
+with your server:port and save!
+

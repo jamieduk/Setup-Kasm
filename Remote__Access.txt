@@ -1,0 +1,5 @@
+1st change firewall settings and allow port forwarding to your kasm server via your router for remote access!
+
+Test with a link like
+https://jnet.sytes.net:8443
+

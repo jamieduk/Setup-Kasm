@@ -1,0 +1,54 @@
+
+Stop All Kasm services.
+
+sudo /opt/kasm/current/bin/stop
+
+Update the agent.app.config.yaml with the desired port.
+
+sudo sed -i "s/public_port.*/public_port: 8443/g" /opt/kasm/current/conf/app/agent.app.config.yaml
+
+    (Optional) Verify the changes with the following command.
+
+    sudo grep public_port /opt/kasm/current/conf/app/agent.app.config.yaml
+      public_port: 8443
+      public_port: 8443
+
+Update the Kasm Nginx proxy configuration to listen on the desired port.
+
+sudo sed -i "s/listen.*/listen 8443 ssl ;/g" /opt/kasm/current/conf/nginx/orchestrator.conf
+
+    (Optional) Verify the changes with the following command.
+
+    sudo grep listen /opt/kasm/current/conf/nginx/orchestrator.conf
+      listen 8443 ssl ;
+
+Update the docker-compose.yaml to export the desired port for kasm_proxy container.
+
+sudo sed -i "s/- \"443:443\"/- \"8443:8443\"/g"  /opt/kasm/current/docker/docker-compose.yaml
+
+    (Optional) Verify the changes with the following command.
+
+    sudo grep kasm_proxy -A5 /opt/kasm/current/docker/docker-compose.yaml
+      container_name: kasm_proxy
+      image: "kasmweb/nginx:latest"
+      ports:
+        - "8443:8443"
+      networks:
+        - kasm_default_network
+
+Remove the kasm_proxy container so it can be recreated using the updated port mapping.
+
+sudo docker rm -f kasm_proxy
+
+Start All Kasm services.
+
+sudo /opt/kasm/current/bin/start
+
+now navigate to
+
+https://192.168.1.108:8443/#/login
+
+
+
+
+
