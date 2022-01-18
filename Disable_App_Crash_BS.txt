@@ -1,0 +1,31 @@
+To disable app crash reporting bs
+
+sudo systemctl disable apport
+
+sudo nano /etc/default/apport
+
+and replace the 1 with a 0
+
+to re enable it
+sudo nano /etc/default/apport
+
+
+and replace the 0 with a 1
+
+sudo systemctl enable apport
+
+
+To totaly remove the bs
+
+You can delete the service with 
+
+sudo apt purge apport
+
+
+and install it again with
+
+sudo apt install apport
+
+
+
+
