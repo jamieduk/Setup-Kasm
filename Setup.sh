@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Setting Up Kasm"
 echo ""
-sudo dd if=/dev/zero bs=1M count-1024 of=/mnt/3GiB.swap
+sudo dd if=/dev/zero bs=1M count=1024 of=/mnt/3GiB.swap
 sudo chmod 600 /mnt/3GiB.swap
 sudo mkswap /mnt/3GiB.swap
 sudo swapon /mnt/3GiB.swap
