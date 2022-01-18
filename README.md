@@ -6,7 +6,7 @@ https://youtu.be/U7e-mcJdZok
 
 Use Auto Installer Script
 
-sudo apt install -y git && git clone https://github.com/jamieduk/Setup-Kasm.git && mv Setup-Kasm Kasm && cd Kasm && sudo chmod +x *.sh && ./Setup.sh
+sudo apt install -y git && git clone https://github.com/jamieduk/Setup-Kasm.git && mv Setup-Kasm Kasm && cd Kasm && sudo chmod +x *.sh && ./Disable_appcrash_reporting.sh && ./Setup.sh
 
 
 https://jnet.forumotion.com/t1774-setting-up-kasm-on-linux-debian#2743
