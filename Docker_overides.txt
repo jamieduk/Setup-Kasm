@@ -1,0 +1,6 @@
+this will give you root access via kali docker using json overides!
+
+{"user":"root"}
+
+
+
