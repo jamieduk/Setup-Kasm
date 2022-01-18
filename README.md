@@ -16,8 +16,6 @@ Manually Setup from Master
 
 git clone https://github.com/kasmtech/KasmVNC.git
 
-Auto installer
-
 wget https://github.com/kasmtech/KasmVNC/releases/download/v0.9.2-beta/kasmvncserver_ubuntu_bionic_0.9.2_amd64.deb
 
 sudo dpkg -i kasmvncserver_*.deb
