@@ -6,7 +6,7 @@ https://youtu.be/U7e-mcJdZok
 
 Use Auto Installer Script
 
-git clone https://github.com/jamieduk/Setup-Kasm.git && mv Setup-Kasm Kasm && cd Kasm && sudo chmod +x *.sh && ./Setup.sh
+sudo apt get install -y git && git clone https://github.com/jamieduk/Setup-Kasm.git && mv Setup-Kasm Kasm && cd Kasm && sudo chmod +x *.sh && ./Setup.sh
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
